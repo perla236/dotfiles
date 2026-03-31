@@ -1,0 +1,1 @@
+https://github.com/kovasko/hyprland-waybar-rofi-dotfiles/tree/master

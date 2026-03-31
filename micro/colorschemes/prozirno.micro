@@ -1,0 +1,4 @@
+color-link default ",transparent"
+color-link line-number ",transparent"
+color-link cursor-line ",#333333"
+color-link gutter ",transparent"
