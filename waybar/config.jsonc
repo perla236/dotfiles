@@ -19,6 +19,7 @@
     "pulseaudio",
     "memory",
     "cpu",
+    "custom/pacman",
     "tray",
     "clock",
     "clock#simpleclock",
@@ -153,5 +154,18 @@
        	"format-alt": "{time} {icon}",
        	"format-full": " {capacity}%",
 	"format-icons": ["", "", "", "", ""]	
-	}
+	},
+
+	 "custom/pacman": {
+    "format": "󰮯 {}",
+    "interval": 3600,
+    "exec": "checkupdates | wc -l",
+    "exec-if": "exit 0",
+    "on-click": "kitty sh -c 'sudo pacman -Syu; echo Gotovo, pritisni bilo koju tipku za zatvaranje...; read'",
+    "signal": 8,
+    "tooltip": false
+  }
 }
+
+
+ 

@@ -5,7 +5,7 @@
 @define-color base-bg rgba(30, 30, 46, 0.8);
 @define-color base-bg-solid #1e1e2e;
 @define-color base-fg #cdd6f4;
-
+@define-color pacman-fg #f9e2af; 
 @define-color ws-bg @base-bg;
 @define-color ws-bg-active @base-bg-solid;
 @define-color ws-bg-urgent #11121d;
@@ -69,6 +69,7 @@ window#waybar {
 #custom-notification,
 #custom-launcher,
 #cpu,
+#custom-pacman,
 #network,
 #memory,
 #window {
@@ -178,6 +179,10 @@ window#waybar {
 
 #custom-cava {
   color: @cava-fg;
+}
+
+#custom-pacman {
+  color: @pacman-fg;
 }
 
 #custom-power {
