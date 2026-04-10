@@ -11,7 +11,6 @@
 	  "custom/launcher",
 	  "hyprland/workspaces",
 	  "custom/cava",
-	  "custom/notification",
 	  "hyprland/window"
   ],
   "modules-center": ["mpris"],
@@ -24,6 +23,7 @@
     "clock",
     "clock#simpleclock",
     "battery",
+   	"custom/notification",
     "custom/power"
   ],
 
@@ -63,9 +63,11 @@
   },
   "clock#simpleclock": {
     "tooltip": false,
-    "format": " {:%H:%M}"
+    "format": " {:%H:%M}",
+    "on-click": "kclock",
   },
   "clock": {
+  "on-click": "gnome-calendar",
     "format": " {:L%a %d %b}",
     "calendar": {
       "format": {
@@ -78,16 +80,19 @@
       "mode": "month",
       "mode-mon-col": 1,
       "on-scroll": 1
+      
     },
     "tooltip-format": "<span color='#cdd6f4' font='Lexend 16'><tt><small>{calendar}</small></tt></span>"
   },
   "cpu": {
     "format": " {usage}%",
     "tooltip": true,
+    "on-click": "kitty sh -c 'btop;'",
     "interval": 1
   },
   "memory": {
-    "format": " {used:0.1f}Gi"
+    "format": " {used:0.1f}Gi",
+    "on-click": "kitty sh -c 'htop;'",
   },
   "pulseaudio": {
     "format": "{icon}{volume}%",
@@ -161,7 +166,7 @@
     "interval": 3600,
     "exec": "checkupdates | wc -l",
     "exec-if": "exit 0",
-    "on-click": "kitty sh -c 'sudo pacman -Syu; echo Gotovo, pritisni bilo koju tipku za zatvaranje...; read'",
+    "on-click": "kitty sh -c 'sudo pacman -Syu; echo Done! Press any key...; read'",
     "signal": 8,
     "tooltip": false
   }

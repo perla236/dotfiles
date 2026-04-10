@@ -29,7 +29,7 @@
 @define-color logo-fg #89b4fa;
 @define-color cava-fg #57ec7c;
 @define-color power-fg #f38ba8;
-
+@define-color notification-fg #cdd6f4;
 @define-color tooltip-bg #181825;
 @define-color tooltip-border #89b4fa;
 @define-color sep-fg #585b70;
@@ -187,6 +187,10 @@ window#waybar {
 
 #custom-power {
   color: @power-fg;
+}
+
+#custom-notification {
+	color: @notification-fg;
 }
 
 /* ===========================
