@@ -22,7 +22,7 @@
 @define-color clock-simple-fg #89b4fa;
 @define-color window-fg @base-fg;
 @define-color audio-fg #b4befe;
-@define-color audio-muted-fg #a6adc8;
+@define-color audio-muted-fg #f38ba8;
 @define-color tray-fg #a6d189;
 @define-color bluetooth-fg #8aadf4;
 @define-color battery-fg #f5a97f;
@@ -151,6 +151,7 @@ window#waybar {
 
 #pulseaudio {
   color: @audio-fg;
+  
 }
 
 #pulseaudio.muted {

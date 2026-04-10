@@ -30,6 +30,7 @@
   "custom/launcher": {
       "tooltip": false, 
       "on-click": "rofi -show drun",
+      "on-click-right": "kitty --hold sh -c 'fastfetch'",
       "format": ""
   },
 
@@ -101,7 +102,8 @@
 	    "headphone": "",
 	    "default": [" ", " ", " "]
 	    },
-    "on-click": "pavucontrol"
+    "on-click": "pavucontrol",
+    "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     
   },
 
